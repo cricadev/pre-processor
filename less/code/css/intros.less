@@ -1,0 +1,108 @@
+.intro {
+	display: grid;
+	place-items: center;
+	grid-template-columns:100%;
+	grid-template-rows: 50% 50%;
+	width: 95%;
+	height: 85vh;
+   	margin: 40px auto;
+	background-color: @light-color;
+	position: relative;
+
+	overflow: hidden;
+	.sombra-caja;
+	&__imagen{
+		width: 100%;
+        height: 100%;
+		position: absolute;
+		border: 10px solid @main-color;
+		border-radius: 10px;
+		img{
+		width: 100%;
+        height: 100%;
+        object-fit: cover;
+		}
+	}
+	&__contenido {
+		grid-column: 1/2;
+		grid-row: 1/2;
+		place-self: center;
+		width: 50%;
+		z-index: 1;
+		text-align: center;
+		color: @light-color;
+	}
+	&__categoria{
+		font-family: @font2;
+		text-transform: uppercase;
+        font-size: 2rem;
+        color: fade(@light-color,50%);
+		font-weight: 900;
+
+
+	}
+	&__titulo{
+		font-family: @font2;
+		text-transform: uppercase;
+		font-size: 5rem;
+		font-weight: 900;
+		
+	}
+	&__autor{
+		grid-column: 1/2;
+		grid-row: 2/3;
+		display: grid;
+        place-items: center;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+		width: 100%;
+        height: 100%;
+		z-index: 1;
+		color: #fff;
+		
+		img{
+            background-color: #242430;
+            grid-column: 1 e("/") 2;
+            grid-row: 1 e("/") 3;
+			width: 80px;
+            height: 80px;
+			margin-right: 10px;
+            object-fit: contain;
+			border-radius: 50%;
+			place-self: center end;
+		}
+        &-titulo{
+            color: fade(@light-color,50%);
+            place-self: end start;
+            grid-column: 2 e("/") 3;
+            grid-row: 1 e("/") 2;
+            font-weight: bold;
+            font-size: 1.6rem;
+
+            padding:5px;
+        }
+        &-nombre{
+            place-self: start start;
+            padding:5px;
+            grid-column: 2 e("/") 3;
+            grid-row: 2 e("/") 3;
+            font-weight: 300;
+              font-size: 1.4rem;
+        }
+        
+        
+        
+        
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
