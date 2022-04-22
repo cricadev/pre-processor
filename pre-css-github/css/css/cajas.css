@@ -1,0 +1,20 @@
+.contenido {
+  margin-bottom: 40px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.caja {
+  max-width: 430px;
+}
+.caja__contenido {
+  padding: 20px;
+  background: color-light;
+}
+.caja__contenido span {
+  font-size: 2rem;
+  color: color-variation;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}

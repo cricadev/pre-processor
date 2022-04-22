@@ -1,0 +1,123 @@
+ {
+  font-family: 'Lato', sans-serif;
+}
+h3 {
+  font-size: 20px;
+  margin: 0;
+}
+h2 {
+  font-size: 25px;
+  margin: 0;
+}
+h1 {
+  font-size: 30px;
+  margin: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #ede6db;
+}
+html {
+  font-size: 62.5%;
+}
+.buscador {
+  width: 100%;
+  height: 250px;
+  padding: 100px;
+  background: #1a3c40;
+  background-size: cover;
+  text-align: center;
+}
+.buscador__input {
+  width: 75%;
+  height: 60px;
+  padding: 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 25px;
+  background: #ede6db;
+}
+.encabezado--con-filtros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 96%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.encabezado--con-filtros h2 {
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 5rem;
+}
+.encabezado--con-filtros .filtros {
+  width: 250px;
+  height: 75px;
+  padding: 20px;
+  margin-left: auto;
+  background-color: #ede6db;
+  -webkit-box-shadow: 0px 20px 33px 0px rgba(26,60,64,0.2);
+          box-shadow: 0px 20px 33px 0px rgba(26,60,64,0.2);
+}
+.encabezado--con-filtros .filtros span {
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.encabezado--con-filtros .filtros a {
+  margin-left: 20px;
+  font-size: 2.5rem;
+  color: #1a3c40;
+}
+.contenido {
+  margin-bottom: 40px;
+}
+justify-content space-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 96%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.caja {
+  background-color: #ede6db;
+  -webkit-box-shadow: 0px 20px 33px 0px rgba(26,60,64,0.2);
+          box-shadow: 0px 20px 33px 0px rgba(26,60,64,0.2);
+  max-width: 430px;
+}
+.caja__contenido {
+  padding: 20px;
+  background: #ede6db;
+}
+.estadistica--articulos {
+  height: 70px;
+  padding: 20px;
+  border-top: 1px solid rgba(26,60,64,0.3);
+}
+.estadistica--articulos ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.estadistica--articulos ul li {
+  list-style: none;
+  color: rgba(26,60,64,0.8);
+}
+.estadistica--articulos ul li i {
+  font-size: 2rem;
+  color: rgba(26,60,64,0.8);
+  margin-right: 10px;
+}
+.estadistica--articulos ul span {
+  margin-left: 10px;
+}

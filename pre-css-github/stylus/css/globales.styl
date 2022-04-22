@@ -1,0 +1,43 @@
+font1 = 'Lato', sans-serif;
+font2 = 'Oswald', sans-serif;
+color-primary = #1A3C40;
+color-secondary  =#417D7A;
+color-light = #EDE6DB;
+color-variation = #1D5C63;
+
+contenedor()
+	display flex
+	width 96%
+	margin 0 auto
+	padding 30px 0
+
+boxShadow()
+	background-color color-light
+	box-shadow 0px 20px 33px 0px rgba(color-primary,0.2)
+
+opacidad(color, cantidad){
+     alpha(color,cantidad)
+}
+for header in 3 2 1
+	h{header}
+		font-size: 35px - (5*header)
+		margin: 0
+
+titulos(fuente)
+	if fuente == font1
+		font-family: font1
+	else 
+		font-family: font2
+		font-weight: 600
+		text-transform: uppercase
+
+* 
+	box-sizing border-box
+
+body
+	margin 0
+	background color-light
+     titulos(font1)
+
+html
+	font-size 62.5%
