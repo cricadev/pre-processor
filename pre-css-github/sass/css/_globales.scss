@@ -1,0 +1,65 @@
+$font1: "Lato",
+sans-serif;
+$font2: "Oswald",
+sans-serif;
+$color-primary: #1A3C40;
+$color-secondary: #417D7A;
+$color-light: #EDE6DB;
+$color-variation: #1D5C63;
+
+@mixin caja{
+    border-radius:20px;
+    box-shadow: 0px 20px 33px 0px rgba($color-primary,0.50);
+    padding: 20px 0;
+    color: $color-primary;
+    background-color: $color-light;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+}
+
+@mixin titles($font){
+    @if $font==$font1{
+        font-family: $font1;
+    } @else{
+        font-family: $font2;
+        text-transform: uppercase;
+    }
+}
+
+
+@function get-opacity($color, $opacity){
+    @return rgba($color, $opacity);
+}
+
+@each $header, $size in (h1:3rem , h2:2rem, h3:1.6rem, h4:1.4rem, h5:1.2rem, h6:1rem) {
+   #{$header}{
+        font-family: $font2;
+        font-weight: 600;
+        font-size: $size;
+        margin: 0;
+        text-transform: uppercase;
+   }
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    @include titles($font1);
+    background-color: $color-light;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
