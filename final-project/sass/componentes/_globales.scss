@@ -8,10 +8,11 @@
 //Variables
 $Fuente1: 'Lato', sans-serif;
 $Fuente2: 'Oswald', sans-serif;
-$color-primario: #333333;
-$color-secundario: #8841DA;
-$color-variacion: #3f579a;
-$color-claro: #FFF;
+$color-primario: #1A3C40;
+$color-secundario: #417D7A;
+$color-variacion: #1D5C63;
+$color-claro: #EDE6DB;
+
 
 //Mixins
 @mixin caja {
@@ -53,10 +54,11 @@ $color-claro: #FFF;
 
 body {
 	margin: 0;
-	background-color: #F9FAFC;
-	color: $color-primario;
+	background-color: $color-primario;
+	color: $color-claro;
 	@include titulos($Fuente1);
 	@include font-size(18px);
+	overflow-x: hidden;
 }
 
 main {

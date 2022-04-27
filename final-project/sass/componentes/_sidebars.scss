@@ -1,8 +1,14 @@
 .sidebar--listado{
-  max-width: 300px;
   padding: 20px;
+  width: 80%;
+  @include media(desktop-s)
+  { 
+    width: 100%;
+  }
+
   @include caja();
   h3{
+    color: $color-claro;
     @include font-size(20px);
     @include titulos($Fuente2);
   }
@@ -13,17 +19,17 @@
   li{
     padding: 10px 0;
     margin: 10px 0;
-    border-top: 1px solid get-opacity($color-primario, .2);
+    border-top: 1px solid get-opacity($color-claro, .2);
     list-style: none;
   }
   a{
     display: flex;
     padding: 10px 20px;
-    color: $color-primario;
+    color: $color-claro;
   }
   &__numero{
     margin-right: 20px;
-    color: get-opacity($color-primario, .5);
+    color: get-opacity($color-claro, .5);
     @include titulos($Fuente2);
   }
 }

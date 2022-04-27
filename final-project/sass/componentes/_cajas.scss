@@ -7,10 +7,11 @@
 
 .caja {
 	max-width: 430px;
+	background-color: $color-secundario;		
 	@include caja;
 	&__contenido {
 		padding: 25px;
-		background-color: $color-claro;		
+		background-color: $color-secundario;		
 	}
 	&__categoria {
 		color: $color-secundario;
@@ -51,13 +52,18 @@
 		position: absolute;
 		text-align: center;
 		color: $color-claro;
+		z-index: 3;
 	}
 	p{
 		color: $color-claro;
+		z-index: 3;
+
 
 	}
 	h3{
 		color: $color-claro;
+		z-index: 3;
+
 	}
 	&__categoria {
 		display: block;
@@ -71,22 +77,19 @@
 	}
 }
 .caja--grande{
-	max-width:1000px;
-	height: 550px;
 	margin-right: 20px;
 	h2{
 		@include titulos($Fuente2);
 		@include font-size(50px);
 	}
 	.caja--con-fondo__contenido{
-		padding-top: 200px;
+		@include media(desktop-s){
+			padding-top: 200px;
+
+		}
 	}
 }
 .caja--mediana{
-	max-width: 600px;
-	height: 250px;
 }
 .caja--pequena{
-	max-width:300px;
-	height: 250px;
 }

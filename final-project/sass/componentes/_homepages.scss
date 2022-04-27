@@ -1,7 +1,10 @@
 .contenedor--home{
   width: 100%;
-  display: flex;
-  flex-direction: column;
+	height: auto;
+  @include display-grid;
+  @include grid-template-columns(1fr);
+	@include grid-template-rows(1fr grid-repeat(7));
+	gap: 40px;
   @include media(desktop-s){
     height:1200px;
     width:1300px;
@@ -13,43 +16,131 @@
   }
   
 }
-
+.caja--con-fondo{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	display: grid;
+	place-items: center;
+	.caja__imagen{
+		width: 100%;
+		height: 100%;
+		img{
+			width: 100%; height: 100%;
+			object-fit: cover;
+		}
+		
+	}
+	h2{
+		@include font-size(20px);
+		@include media(desktop-s){
+			@include font-size(24px);
+		}
+	}
+	p{
+		@include font-size(16px);
+		@include media(desktop-s){
+			@include font-size(20px);
+		}
+	}
+}
 .caja--grande {
-	@include grid-row(1,3);
-	@include grid-column(1,4);
+	@include grid-row(1,2);
+	@include grid-column(1,2);
+	display: flex;
+	justify-content: center;
+	height: auto; 
+	width: 100%;
+	h2{
+		@include font-size(24px);
+		@include media(desktop-s){
+			@include font-size(50px);
+		}
+	}
+	.caja__imagen{
+		width: 100%;
+		height: 100%;
+		img{
+			width: 100%; height: 100%;
+			object-fit: cover;
+		}
+	}
+		
+	.caja--con-fondo__contenido{
+		
+		p{
+			display: none;
+
+			@include media(desktop-s){
+				display: block;
+				text-align: center;
+				color: $color-claro;
+			}
+		}
+
+	}
+
+	@include media(desktop-s){
+		@include grid-row(1,3);
+		@include grid-column(1,4);
+		}
+	
 }
 
+.caja-rdr2 {
+	@include grid-row(3,4);
+	@include media(desktop-s){
+		@include grid-row(1, 2);
+		@include grid-column(4, 5);	
+		}
+}
 .banner--homepage {
-	@include grid-row(2, 4);
-	@include grid-column(4, 5);	
+	margin: 0 auto;
+
+	@include grid-row(4,5);
+width: 100%;
+	@include media(desktop-s){
+		@include grid-row(2, 4);
+		@include grid-column(4, 5);	
+		}
 }
 
 .sidebar--listado {
-	@include grid-row(3, 5);
-	@include grid-column(1, 2);	
+	margin: 0 auto;
+	@include grid-row(2,3);
+
+	@include media(desktop-s)
+	{
+		@include grid-row(3, 5);
+		@include grid-column(1, 2);	
+		}
 }
 
 .caja-zelda {
-	@include grid-row(3, 4);
-	@include grid-column(2, 4);	
+	@include media(desktop-s){
+		@include grid-row(3, 4);
+		@include grid-column(2, 4);	
+		}
 }
 
-.caja-rdr2 { 
-	@include grid-row(1, 2);
-	@include grid-column(4, 5);	
-}
 
-.caja-ff { 
-	@include grid-row(4, 5);
-	@include grid-column(2, 3);	
+.caja-ff {
+	@include media(desktop-s){
+		@include grid-row(4, 5);
+		@include grid-column(2, 3);	
+		}
 } 
 
-.caja-fortnite { 
-	@include grid-row(4, 5);
-	@include grid-column(3, 4);	
+.caja-fortnite {
+	@include media(desktop-s){
+		@include grid-row(4, 5);
+		@include grid-column(3, 4);	
+		}
 } 
 
-.caja-xbox { 
-	@include grid-row(4, 5);
-	@include grid-column(4, 5);	
+.caja-xbox {
+	@include media(desktop-s){
+		@include grid-row(4, 5);
+		@include grid-column(4, 5);	
+		}
 } 

@@ -1,10 +1,30 @@
 .header--principal{
   display: flex;
-  padding: 0 20px 20px 20px;
-  margin-bottom: 20px;
   width:100%;
-  height: 90px;
+  height:auto;
   border-bottom: 1px solid #ebebeb;
+  @include media(desktop-s){
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  .logo{
+    margin-left: 10px;
+    width: 30px;
+    height: 40px;
+    padding: 5px;
+    @include media(desktop-s){
+      width: 80px;
+      height: 90px;
+    }
+    a{
+      cursor: pointer;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      margin-right: 20px;
+    }
+  }
   
 }
 .nav--header ul{
@@ -15,7 +35,7 @@
     margin-right: 50px;
   }
   a{
-    color: $color-variacion;
+    color: $color-claro;
     @include titulos($Fuente2);
   }
   @include media(desktop-s){
@@ -32,10 +52,10 @@
   i{
     font-size: 2rem;
     margin-right: 10px;
-    color: $color-secundario;
+    color: $color-claro;
   }
   span{
-    color: $color-variacion;
+    color: $color-claro;
     @include titulos($Fuente2);
   }
   @include media(desktop-s){

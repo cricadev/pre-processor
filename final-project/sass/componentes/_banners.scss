@@ -1,9 +1,14 @@
 .banner--homepage{
-  max-width: 300px;
+  display: grid;
+  place-items: center;
   padding: 50px;
   margin-bottom: 20px;
   background-color:$color-secundario;
   color: $color-claro;
+  width: 80%;
+  @include media(desktop-s){
+    width: 100%;
+  }
   h3{
     @include font-size(20px);
     @include titulos($Fuente2);
