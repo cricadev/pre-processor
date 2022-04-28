@@ -16,11 +16,12 @@
 		@include caja;
 	}
 		span {
+			color: $color-claro;
 			@include titulos($Fuente2);
 		}
 		a {
 			margin-left: 20px;
-			color: #ccc;
+			color: $color-claro;
 			font-size: 20px;
 		}
 }

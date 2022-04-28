@@ -19,7 +19,30 @@ $color-claro: #EDE6DB;
 	color: $color-primario;
 	box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.20);
 }
-
+@mixin centerFull{
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+@mixin menu{
+	cursor: pointer;
+	width: 30px;
+	height: 5px;
+	border-radius: 2px;
+	background: $color-secundario;
+	position: relative;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	margin-right: 20px;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
 @mixin titulos($fuente) {
 	@if $fuente ==$Fuente1 {
 		font-family: $Fuente1;

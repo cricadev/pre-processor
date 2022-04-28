@@ -50,14 +50,19 @@
 		text-align: center;
 		ul{
 			display: flex;
+			justify-content: space-evenly;
+			width: 100%;
 		}
 		li{
 			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
 			margin-right: 50px;
 			opacity: 0.8;
 		}
 		i{
 			color: $color-claro;
+			padding: 0 10px;
 		}
 		span{
 			color: $color-claro;

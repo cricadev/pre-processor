@@ -7,7 +7,8 @@
 
 .caja {
 	max-width: 430px;
-	background-color: $color-secundario;		
+	background-color: $color-secundario;
+	padding: 10px;		
 	@include caja;
 	&__contenido {
 		padding: 25px;
@@ -16,6 +17,11 @@
 	&__categoria {
 		color: $color-secundario;
 		@include titulos($Fuente2);
+	}
+	&__imagen{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
@@ -27,11 +33,17 @@
 
 .contenido {
 	margin-bottom: 40px;
-	justify-content: space-evenly;
-	display: flex;
-	width: 90%;
-	margin: 0 auto;
-	padding: 30px 0;
+	display: grid;
+	grid-template-columns: 100%;
+	place-items: center;
+	width: 100%;
+	gap: 40px;
+	@include media(tablet){
+		grid-template-columns: 50% 50%;
+	}
+	@include media(desktop-m){
+		grid-template-columns: 33% 33% 33%;
+	}
 } 
 .caja--con-fondo{
 	display: block;
@@ -46,6 +58,7 @@
 		position: absolute;
 		opacity: 0.5;
 		object-fit: contain;
+		margin: 0 auto;
 	}
 	&__contenido{
 		padding: 20px;

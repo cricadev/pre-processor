@@ -1,18 +1,20 @@
 .header--principal{
+
   display: flex;
   width:100%;
   height:auto;
-  border-bottom: 1px solid #ebebeb;
+  justify-content: space-between;
+  border-bottom: 1px solid get-opacity($color-claro, .5);
   @include media(desktop-s){
-    margin-bottom: 20px;
     padding: 10px;
   }
   .logo{
-    margin-left: 10px;
+    margin-left: 20px;
     width: 30px;
     height: 40px;
     padding: 5px;
-    @include media(desktop-s){
+    z-index: 10;
+    @include media(tablet){
       width: 80px;
       height: 90px;
     }
@@ -27,6 +29,122 @@
   }
   
 }
+.menu--header{
+  display: grid;
+  place-items: center;
+  height: auto;
+  padding: 4px 0;
+  @include media(tablet){
+    display: none;
+  }
+}
+.menu--header div:nth-child(1){
+ @include menu;
+}
+.menu--header div:nth-child(2){
+  @include menu;
+  opacity: 1;
+
+}
+.menu--header div:nth-child(3){
+  @include menu;
+}
+.menu--header .menu--bg{
+  background: $color-primario;
+  width: 100vw;
+  top: 0;bottom: 0;left: 0;right: 0;
+  height: 100%;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 300ms linear, transform 500ms ease-in-out;
+  -webkit-transition: opacity 300ms linear, transform 500ms ease-in-out;
+  -moz-transition: opacity 300ms linear, transform 500ms ease-in-out;
+  -ms-transition: opacity 300ms linear, transform 500ms ease-in-out;
+  -o-transition: opacity 300ms linear, transform 500ms ease-in-out;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  ul{
+    height: 80%;
+    width: 100%;
+    margin: 0 auto;  
+    padding: 0;
+    display: grid;
+    place-items: center;
+    li
+    {
+      list-style: none;
+      @include centerFull;
+
+      &:hover{
+        background-color: $color-secundario;
+      }
+    }
+      a{
+        text-transform: uppercase;
+        text-decoration: none;
+        @include centerFull;
+        @include font-size(24px);
+        font-weight: bold;
+        color: $color-claro;
+       
+        }
+      }
+      
+    }
+  
+  
+
+
+.menu--header.active .menu--bg{
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+ 
+ 
+}
+.menu--header div{
+  z-index: 10;
+}
+.menu--header:hover div{
+  background-color: $color-claro;
+}
+.menu--header:hover .menu--bg{
+  background-color: $color-primario;
+}
+.menu--header.active div:nth-child(1){
+  transform: translate(0px, 10px) rotate(45deg);
+  -webkit-transform: translate(0px, 10px) rotate(45deg);
+  -moz-transform: translate(0px, 10px) rotate(45deg);
+  -ms-transform: translate(0px, 10px) rotate(45deg);
+  -o-transform: translate(0px, 10px) rotate(45deg);
+  background: $color-claro;
+
+}
+.menu--header.active div:nth-child(2){
+  opacity: 0;
+  transform:translateX(200%);
+  -webkit-transform:translateX(200%);
+  -moz-transform:translateX(200%);
+  -ms-transform:translateX(200%);
+  -o-transform:translateX(200%);
+}
+.menu--header.active div:nth-child(3){
+  transform: translate(0px, -11px) rotate(-45deg);
+  -webkit-transform: translate(0px, -11px) rotate(-45deg);
+  -moz-transform: translate(0px, -11px) rotate(-45deg);
+  -ms-transform: translate(0px, -11px) rotate(-45deg);
+  -o-transform: translate(0px, -11px) rotate(-45deg);
+  background: $color-claro;
+}
 .nav--header ul{
   display: none;
   padding-top: 35px;
@@ -38,7 +156,7 @@
     color: $color-claro;
     @include titulos($Fuente2);
   }
-  @include media(desktop-s){
+  @include media(tablet){
     display: flex;
   }
 }
@@ -58,7 +176,7 @@
     color: $color-claro;
     @include titulos($Fuente2);
   }
-  @include media(desktop-s){
+  @include media(tablet){
     display: flex;
   }
 }
